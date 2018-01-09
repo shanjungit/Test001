@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 public class DemoServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
-			//获取类型
+			
 			String type=request.getParameter("type");
 			System.out.println(type);
-			//判断类型
-			if("2".equals(type)){//管理员
+			
+			if("2".equals(type)){
 			request.getRequestDispatcher("/Admin.jsp").forward(request, response);
 			}else{
 			request.getRequestDispatcher("/manager.jsp").forward(request, response);

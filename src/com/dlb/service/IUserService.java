@@ -4,13 +4,13 @@ import com.dlb.domain.User;
 
 public interface IUserService {
 	/**
-	 * 提供注册服务
+	 * Provide register user service
 	 * @param user
 	 * 
 	 */
 	void registerUser(User user);
 	/**
-	 * 提供登录服务
+	 * Provided login service
 	 * @param userName
 	 * @param passWord
 	 * @return

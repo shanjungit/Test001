@@ -11,7 +11,7 @@ public class UserServiceImpl implements IUserService{
 	public void registerUser(User user) {
 		// TODO Auto-generated method stub
 		if(null != userDao.find(user.getUserName())) {
-			System.out.println("用户名已经存在");
+			System.out.println("The user doesn't not exist");
 		}
 	}
 

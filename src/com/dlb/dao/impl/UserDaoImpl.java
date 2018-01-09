@@ -14,7 +14,7 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public User find(String userName, String password) {
-		System.out.println("进入User Find 函数");
+		
 		String sql = "select UserName,pass_Word__c, function_Profile__c from User_Info__c "
 				+ "where UserName = ?";
 		User u = new User();
@@ -40,11 +40,11 @@ public class UserDaoImpl implements IUserDao {
 				ResultSetMetaData rsmd = rs.getMetaData();
 				System.out.println(rsmd.toString());
 			}
-			System.out.println("查询完成！！");
+			System.out.println("Query Successful");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("创建Statement失败");
+			System.out.println("Failed to created statement");
 		}
 		u.setUserName(userNameToCheck);
 		u.setFunctionProfile(functionProfile);

@@ -20,16 +20,16 @@ public class ConnectionHelper {
 	}
 	public Connection getConnection() {
 		Connection conn = null;
-		System.out.println("开始链接数据库。。。。");
+		System.out.println("Connecting Database.....");
 		try {
 			conn = DriverManager.getConnection(URL);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
-			System.out.println("连接数据库失败！");
+			System.out.println("Failed to connect dataBase");
 			return conn;
 		}
-		System.out.println("连接数据库成功");
+		System.out.println("Connect database successful");
 		return conn;
 	}
 	
@@ -41,10 +41,10 @@ public class ConnectionHelper {
 				rs.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
-				System.out.println("关闭Result Set 失败");
+				System.out.println("Failed to close Result set");
 			}
 			rs = null;
-			System.out.println("关闭Result Set 成功");
+			System.out.println("Close ResultSet successful");
 		}
 		if(null != ps) {
 			try {
@@ -52,11 +52,11 @@ public class ConnectionHelper {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				System.out.println("关闭StateMent失败");
+				System.out.println("Failed to close statement");
 				
 			}
 			ps = null;
-			System.out.println("关闭PrepareStateMent成功");
+			System.out.println("Close PrepareStateMent successfully");
 		}
 		if(null != conn) {
 			try {
@@ -64,11 +64,11 @@ public class ConnectionHelper {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				System.out.println("关闭Connection失败");
+				System.out.println("Failed to close Connection");
 				return;
 			}
 			conn = null;
-			System.out.println("关闭Connection成功");
+			System.out.println("Close connection successfully");
 		}
 	}
 	

@@ -2,19 +2,19 @@ package com.dlb.dao;
 import com.dlb.domain.User;
 public interface IUserDao {
 	/**
-	 * ¸ù¾İÓÃ»§ÃûºÍÃÜÂë²éÕÒÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åå’Œå¯†ç æŸ¥æ‰¾ç”¨æˆ·
 	 * @param userName
 	 * @param password
 	 * @return User
 	 */
 	User find(String userName,String password);
 	/**
-	 * Ìí¼ÓÓÃ»§
+	 * æ·»åŠ ç”¨æˆ·
 	 * @param user
 	 */
 	void add(User user);
 	/**
-	 * ¸ù¾İÓÃ»§Ãû²éÕÒÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·åæŸ¥æ‰¾ç”¨æˆ·
 	 * @param user
 	 * @return
 	 */
